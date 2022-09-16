@@ -1,9 +1,9 @@
-IMAGE_NAME = "bento/ubuntu-20.04"
+IMAGE_NAME = "bento/ubuntu-21.10"
 N = 3
 
 Vagrant.configure("2") do |config|
     config.ssh.insert_key = false
-
+    config.vm.box_download_insecure = true
     config.vm.provider "virtualbox" do |v|
         v.memory = 1024
         v.cpus = 1
